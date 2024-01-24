@@ -5,16 +5,25 @@ public class BasicInput {
         Scanner scnr = new Scanner(System.in);
         int userInt = 0;
         double userDouble = 0.0;
-        // TODO Define char and string variables similarly
+        String userString = " ";
+        char userChar = ' ';
 
-        System.out.println("Enter integer:");
-        userInt = scnr.nextInt();
+        System.out.println("Enter integer:"); // Asks for user to input an integer
+        userInt = scnr.nextInt(); // scans the next token of the input as an int
 
-        // TODO (1): Finish reading other items into variables, then output the four values on a single line separated by a space
+        System.out.println("Enter double:"); // Asks for user to input a double
+        userDouble = scnr.nextDouble(); // scans the next token of the input as a double
 
-        // TODO (2): Output the four values in reverse
+        System.out.println("Enter character:"); // Asks for user to input a character
+        userChar = scnr.next().charAt(0);
 
-        // TODO (3): Cast the double to an integer, and output that integer
+        System.out.println("Enter string:"); // Asks for user to input a string
+        userString = scnr.next(); // scans the next token of the input as a string
 
+        System.out.println(userInt + " " + userDouble + " " + userChar + " " + userString);
+        System.out.println(userString + " " + userChar + " " + userDouble + " " + userInt);
+
+        int userIntTwo = (int) userDouble; // casting the double into an integer
+        System.out.println(userDouble +" " + "cast to an integer is" + " " + userIntTwo); // outputting the integer
     }
 }
